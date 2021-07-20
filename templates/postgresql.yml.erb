@@ -32,6 +32,10 @@ bootstrap:
     - data-checksums
 <% end -%>
     - encoding: <%= @initdb_encoding %>
+<% if @initdb_encryption_command -%>
+    - encryption-key-command: >-
+        "<%= @initdb_encryption_command %>"
+<% end -%>
     - locale: <%= @initdb_locale %>
 <% unless @bootstrap_pg_hba.empty? -%>
   pg_hba:

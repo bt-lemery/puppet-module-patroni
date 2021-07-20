@@ -21,6 +21,7 @@ class patroni (
   String $bootstrap_method              = $patroni::params::bootstrap_method,
   Boolean $initdb_data_checksums        = $patroni::params::initdb_data_checksums,
   String $initdb_encoding               = $patroni::params::initdb_encoding,
+  Variant[Undef,String] $initdb_encryption_command     = undef,
   String $initdb_locale                 = $patroni::params::initdb_locale,
   Array[String] $bootstrap_pg_hba       = $patroni::params::bootstrap_pg_hba,
   Hash $bootstrap_users                 = {},
