@@ -247,7 +247,7 @@ kubernetes:
   ports: <%= @kubernetes_ports %>
 <% end -%>
 <% end -%>
-<% if @use_consul -%>
+
 
 log:
 <% if @patroni_log_level != nil -%>
@@ -268,6 +268,7 @@ log:
 <% if @patroni_log_traceback_level != nil -%>
   patroni_log_traceback_level: <%= @patroni_log_traceback_level %>
 <% end -%>
+<% if @use_consul -%>
 
 consul:
   host: <%= @consul_host %>
